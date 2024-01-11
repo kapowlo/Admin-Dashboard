@@ -10,6 +10,14 @@ then for each individual section ill decide i f its better to use flexbox or gri
   margin: 0;
   box-sizing: border-box;
 }
+ul li,
+nav {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style-type: none;
+}
 
 /*general styles for buttons, body and container div(use auto-fit with grid and minmax 150px-200px 1fr) */
 body {
@@ -105,6 +113,25 @@ input {
   grid-row: 1/3;
 }
 
+a {
+  border: 2px solid blue;
+
+  text-decoration: none;
+  margin: 0 0 1em 1em; /*create some space between each link and the left edge of sb section */
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+}
+
+.first-link-Dashboard {
+  font-size: 1.25em;
+  margin-bottom: 1.25em;
+}
+.SB-wrap-img {
+  margin-right: 1em;
+}
 /*end of styling  for the SB section */
 
 /*styling main section */
