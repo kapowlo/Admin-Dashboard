@@ -28,7 +28,7 @@ body {
   height: 100%;
   border: 4px solid red;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
   grid-auto-flow: row;
   grid-auto-rows: 1fr 3fr;
 }
@@ -42,6 +42,11 @@ button {
 
   color: white;
   font-size: 14px;
+}
+
+/*targets the Dashboard text and kapowlo Random text*/
+.larger-text {
+  font-size: 1.25em;
 }
 
 /*styling header section */
@@ -114,7 +119,7 @@ input {
 }
 
 a {
-  border: 2px solid blue;
+  /*  border: 2px solid blue; */
 
   text-decoration: none;
   margin: 0 0 1em 1em; /*create some space between each link and the left edge of sb section */
@@ -126,12 +131,27 @@ a {
 }
 
 .first-link-Dashboard {
-  font-size: 1.25em;
-  margin-bottom: 1.25em;
+  margin-bottom: 1.55em;
 }
 .SB-wrap-img {
   margin-right: 1em;
 }
+
+.bold {
+  /*targets the Dashboard text makes it more bold than the rest */
+  font-weight: bolder;
+}
+
+/*Selects the Dashboard text */
+nav ul a.first-link-Dashboard li {
+  margin-left: -0.69em;
+}
+
+/*Selects the 7th child of the anchor element and put some margin bottom to separate from settings */
+nav ul a:nth-child(7) {
+  margin-bottom: 3em; /*adds more space between communities and settings */
+}
+
 /*end of styling  for the SB section */
 
 /*styling main section */
