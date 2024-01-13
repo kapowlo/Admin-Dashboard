@@ -44,9 +44,14 @@ button {
   font-size: 14px;
 }
 
-/*targets the Dashboard text and kapowlo Random text*/
 .larger-text {
+  /*targets the Dashboard text and kapowlo Random text*/
   font-size: 1.25em;
+}
+
+.bold {
+  /*makes any text more bold than the rest */
+  font-weight: bolder;
 }
 
 /*styling header section */
@@ -135,11 +140,6 @@ a {
 }
 .SB-wrap-img {
   margin-right: 1em;
-}
-
-.bold {
-  /*targets the Dashboard text makes it more bold than the rest */
-  font-weight: bolder;
 }
 
 /*Selects the Dashboard text */
