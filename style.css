@@ -26,7 +26,7 @@ body {
 
 .container {
   height: 100%;
-  border: 4px solid red;
+  border: 4px solid rebeccapurple;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-auto-flow: row;
@@ -162,6 +162,80 @@ main {
   grid-column: 2;
   grid-row: 2;
 }
-/*main will need grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+/*main(grid container) will need grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+
+.projects-card {
+  /*make each card look kind of like a rect */
+  width: 26em;
+  height: 12em;
+  padding: 1em;
+  border: 1px solid black;
+  border-left: 4px solid orange;
+
+  font-size: 0.75em;
+
+  display: flex;
+  flex-direction: column;
+}
+.wrap-projects-img {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row-reverse;
+  /* justify-content: flex-end;
+  margin-right: 1em; */
+}
+
+.projects-section .projects-card img {
+  /*create some space between each images of the section */
+  margin: 0 0.5em;
+}
+
+/*Style announcement section */
+.announcements-card {
+  border: 2px solid black;
+  padding-left: 1em;
+  width: 20em;
+  height: 33em;
+
+  font-size: 0.75em;
+}
+
+hr {
+  width: 95%;
+  margin: 1em 1em 1em 0;
+  border: 1px solid blue;
+}
+
+/* Style Trending-section  */
+.trending-section {
+  border: 2px solid red;
+  width: 14.96em;
+  height: 30em;
+  background-color: lightgreen;
+  /*mack the bg of this section lightgreen for now */
+}
+
+.trending-card {
+  border: 2px solid black;
+  height: 8em;
+  width: 92%;
+  margin-left: 2%;
+  background-color: bisque;
+
+  font-size: 0.75em;
+
+  display: flex;
+}
+.trending-section img {
+  border: 2px solid black;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 1.25em;
+  background-color: rgba(30, 143, 255, 0.46);
+}
+.wrap-trending-text {
+  /*create space between image and both p text */
+  margin-left: 1em;
+}
 
 /*end of styling  for the main section */
