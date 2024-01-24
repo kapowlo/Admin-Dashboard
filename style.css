@@ -158,31 +158,82 @@ nav ul a:nth-child(7) {
 .grey-bg {
   background-color: #d4d4d8;
 }
+
 main {
+  border: 8px solid yellow;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1%;
   grid-column: 2;
   grid-row: 2;
 }
-/*main(grid container) will need grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
 
+/*project will be a grid item and a container */
+.projects-section {
+  border: 4px solid blue;
+  width: auto; /*make a width and have 2 columns so the cards should be 300px width 300*2=600 */
+  height: auto; /*height 900px 3 rows with each card being 300height */
+  grid-column: 1/2;
+  grid-row: 1/4;
+  display: grid;
+  justify-items: stretch;
+  align-items: stretch;
+  /*line below is for positioning the cards inside of the project-section and making them responsive if i can...  */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2%;
+}
+
+.grid-item1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.grid-item2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.grid-item3 {
+  grid-column: 1/1;
+  grid-row: 2/2;
+}
+.grid-item4 {
+  grid-column: 2/2;
+  grid-row: 2/2;
+}
+.grid-item5 {
+  grid-column: 1/2;
+  grid-row: 3/3;
+}
+.grid-item6 {
+  grid-column: 2/3;
+  grid-row: 3/3;
+}
 .projects-card {
   /*make each card look kind of like a rect */
-  width: 26em;
-  height: 12em;
+  /*  width: 400px;*/
+  height: 16em;
+  margin: 1em 1em 0 1em;
   padding: 1em;
-  border: 1px solid black;
-  border-left: 4px solid orange;
-
+  border: 1px solid black; /*remove when project-section is done */
+  border-left: 8px solid orange;
+  border-radius: 2%;
+  background-color: white;
   font-size: 0.75em;
 
+  overflow: auto; /*when screen gets small add a scroll option to see the 3 images under the text */
+
   display: flex;
+  justify-content: stretch;
   flex-direction: column;
 }
 .wrap-projects-img {
+  border: 2px solid rebeccapurple;
   margin-top: 1em;
   display: flex;
   flex-direction: row-reverse;
-  /* justify-content: flex-end;
-  margin-right: 1em; */
+  align-self: end;
 }
 
 .projects-section .projects-card img {
@@ -191,6 +242,12 @@ main {
 }
 
 /*Style announcement section */
+.my-announcements-section {
+  /*position this section to the right of my project section */
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+
 .announcements-card {
   border: 2px solid black;
   padding-left: 1em;
@@ -207,19 +264,24 @@ hr {
 }
 
 /* Style Trending-section  */
+
 .trending-section {
   border: 2px solid red;
-  width: 14.96em;
-  height: 30em;
+
+  width: 90%;
+  height: auto;
   background-color: lightgreen;
   /*mack the bg of this section lightgreen for now */
+
+  /*position this inside of the grid container right under announcement section */
+  grid-column: 2/2;
+  grid-row: 3/3;
 }
 
 .trending-card {
   border: 2px solid black;
   height: 8em;
-  width: 92%;
-  margin-left: 2%;
+  width: 90%;
   background-color: bisque;
 
   font-size: 0.75em;
