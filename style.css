@@ -162,6 +162,8 @@ main {
   height: 100%;
   display: grid;
   grid-template-columns: 3fr 1fr;
+  /*explicitly declared rows because trending section was leaking outside of main  */
+  grid-template-rows: 1fr 1fr;
   gap: 1%;
   grid-column: 2;
   grid-row: 2;
@@ -216,7 +218,7 @@ main {
   padding: 1em;
   border: 1px solid black; /*remove when project-section is done */
   border-left: 8px solid orange;
-  border-radius: 2%;
+  border-radius: 8px;
   background-color: white;
   font-size: 0.75em;
 
@@ -241,16 +243,18 @@ main {
 
 /*Style announcement section */
 .my-announcements-section {
+  margin-top: 1em;
   /*position this section to the right of my project section */
   grid-column: 2/3;
   grid-row: 1/3;
 }
 
 .announcements-card {
-  border: 2px solid black;
   padding-left: 1em;
   width: 20em;
   height: 33em;
+  border: 2px solid black;
+  border-radius: 8px;
 
   font-size: 0.75em;
 }
@@ -264,24 +268,23 @@ hr {
 /* Style Trending-section  */
 
 .trending-section {
-  border: 2px solid red;
-
-  width: 90%;
   height: auto;
-  background-color: lightgreen;
-  /*mack the bg of this section lightgreen for now */
-
+  width: 90%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-radius: 8px;
+  border: 2px solid black;
+  background-color: white;
   /*position this inside of the grid container right under announcement section */
   grid-column: 2/2;
   grid-row: 3/3;
 }
 
 .trending-card {
-  border: 2px solid black;
   height: 8em;
-  width: 90%;
-  background-color: bisque;
+  width: 100%;
 
+  padding: 1em 0 1em 1em; /*pushes the images away from top and left edges of the card */
   font-size: 0.75em;
 
   display: flex;
@@ -290,6 +293,7 @@ hr {
   border: 2px solid black;
   width: 2.5em;
   height: 2.5em;
+
   border-radius: 1.25em;
   background-color: rgba(30, 143, 255, 0.46);
 }
