@@ -124,8 +124,6 @@ input {
 }
 
 a {
-  /*  border: 2px solid blue; */
-
   text-decoration: none;
   margin: 0 0 1em 1em; /*create some space between each link and the left edge of sb section */
 
@@ -142,8 +140,8 @@ a {
   margin-right: 1em;
 }
 
-/*Selects the Dashboard text */
 nav ul a.first-link-Dashboard li {
+  /*Selects the Dashboard text */
   margin-left: -0.69em;
 }
 
@@ -230,10 +228,10 @@ main {
 }
 .wrap-projects-img {
   border: 2px solid rebeccapurple;
-  margin-top: 1em;
+  margin-top: 5em; /*creates vertical space between the image container and the text by pushing all the images down*/
   display: flex;
   flex-direction: row-reverse;
-  align-self: end;
+  align-self: stretch; /*the img container will stretch and take up the full width keep it for now */
 }
 
 .projects-section .projects-card img {
