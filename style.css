@@ -240,9 +240,10 @@ main {
 .announcements-card {
   background-color: white;
   padding-left: 1em;
+  padding-top: 1em;
   width: 20em;
   height: 33em;
-  border: 2px solid black;
+
   border-radius: 8px;
 
   font-size: 0.75em;
@@ -262,7 +263,7 @@ hr {
   margin-top: 1em;
   margin-bottom: 1em;
   border-radius: 8px;
-  border: 2px solid black;
+
   background-color: white;
   /*position this inside of the grid container right under announcement section */
   grid-column: 2/2;
@@ -279,7 +280,6 @@ hr {
   display: flex;
 }
 .trending-section img {
-  border: 2px solid black;
   width: 2.5em;
   height: 2.5em;
 
