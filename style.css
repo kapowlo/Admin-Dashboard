@@ -279,8 +279,7 @@ hr {
   height: auto;
   width: 90%;
   margin-top: 1em;
-  margin-bottom: 1em;
-  border-radius: 8px;
+  margin-bottom: 4em;
 
   /*position this inside of the grid container right under announcement section */
   grid-column: 2/2;
@@ -288,6 +287,17 @@ hr {
 }
 .trending-section h4 {
   margin-bottom: 1em;
+}
+
+.trending-section .trending-card:first-of-type {
+  /*round the corners of the top left and right of the first card only  */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.trending-section .trending-card:last-of-type {
+  /*round the corners of the top left and right of the first card only  */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .trending-card {
