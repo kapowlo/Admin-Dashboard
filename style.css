@@ -175,8 +175,8 @@ main {
   display: grid;
   justify-items: stretch;
   align-items: stretch;
-  /*line below is for positioning the cards inside of the project-section and making them responsive if i can...  */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 0.1fr repeat(3, 1fr); /*the 0.1fr controls the space between the h4 text my project and the first card */
   gap: 2%;
 }
